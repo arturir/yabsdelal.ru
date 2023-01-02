@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="gallery-master/css/blueimp-gallery.min.css" />
+    <title>Document</title>
+</head>
+<body>   
+    <header>
+        <div class="header_left">
+            <div class="logo">ЯбСделал</div>
+            <div class ="header_left_right"> 
+                <a href="tel:+79300304430"><div class="number_header">+7-930-030-44-30</div></a>
+                <div class="adress_header">ул. Дворянская 10 (ЦУМ Валентина), 2 этаж</div>
+                <div class="scheme">Схема прохода</div>
+            </div>
+        </div>
+        <div class="navigation">
+            <div class="menu">Наши услуги</div>
+            <div class="contacts" href="/kontakty">Контакты</div>
+        </div>
+    </header>
+    <div class="body">
+        <div class="mainBanner">
+            <h1 class="mainBanner__h1">Ремонт телефонов во Владимире</h1>
+            <div class="mainBanner__bottom">
+                <button type="button" class="greenButton">Узнать стоимость</button>
+                <div class="mainBanner__description">Среднее время ремонта ~ 3 часа</div>
+            </div>
+        </div>
+        <div class="aboutUs">
+            <div class="ourExperience">
+                <h2 class="header2">Работаем с 2019 г.</h2>
+                <h2 class="header2">Наладили более 4 000 устройств</h2>
+                <div class="raiting">
+                    <div class="raiting__point">Рейтинг Яндекс 4.9</div>
+                    <div class="raiting__point">Рейтинг Google - 5.0</div>
+                    <div class="raiting__point">Рейтинг 2ГИС - 4.5</div>
+                </div>
+                <hr class="greyLine"/>
+                <div class="ourExperience__wrapper">
+                    <div class="ourExperience__column">
+                        <p class="smallHeaderBold">От 30 до 180 дней гарантии на выполненный ремонт</p>
+                        <p class="smallGreyText">Выдается гарантийный талон</p>
+                    </div>
+                    <div class="ourExperience__column">
+                        <p class="smallHeaderBold">95% положительных отзывов</p>
+                        <p class="smallGreyText">Более 100 положительных отзывов на Яндекс картах, Google-maps, 2ГИС, Вконтакте</p>
+                    </div>
+                </div>
+            </div>
+            <div class="yandexMap">
+                <iframe src="https://yandex.ru/map-widget/v1/?z=15&ol=biz&oid=19637641765" width="100%" height="300" frameborder="0"></iframe>
+            </div>
+
+        </div>
+    </div>
+    <!-- <div class="exampleOurWork">                
+        <div id="links" class="photoAlmbum">
+            <div class="photoAlbum__columnLeft">
+                <a class="bigThumbnailsImg" href="images/brokenphone.jpg" title="brokenphone">
+                    <img src="images/thumbnails/brokenphone.jpg" alt="brokenphone" />
+                </a>
+                <a class="bigThumbnailsImg" href="images/brokenphone.jpg" title="brokenphone">
+                  <img src="images/thumbnails/brokenphone.jpg" alt="brokenphone" />
+                </a>
+            </div>
+            <div class="photoAlbum__columnRight">  
+                <a class="thumbnailsImg" href="images/brokenphone.jpg" title="brokenphone">
+                  <img src="images/thumbnails/brokenphone.jpg" alt="brokenphone" />
+                </a>            
+                <a class="thumbnailsImg" href="images/brokenphone.jpg" title="brokenphone">
+                  <img src="images/thumbnails/brokenphone.jpg" alt="brokenphone" />
+                </a>
+                <a class="thumbnailsImg" href="images/brokenphone.jpg" title="brokenphone">
+                  <img src="images/thumbnails/brokenphone.jpg" alt="brokenphone" />
+                </a>
+                 <a class="thumbnailsImg" href="images/brokenphone.jpg" title="brokenphone">
+                  <img src="images/thumbnails/brokenphone.jpg" alt="brokenphone" />
+                </a>
+            </div>    
+        </div> -->
+        <div class="exampleOurWork">
+            <h1 class="header1">Примеры нашей работы</h1>
+            <div class="photoAlbum">
+                <div class="photoAlbum__left">
+                    <img class="photoAlbum__item" src="images/thumbnails/brokenphone.jpg" alt="brokenphone" />
+                    <img class="photoAlbum__item" src="images/thumbnails/brokenphone.jpg" alt="brokenphone" />
+                </div>
+                <div class="photoAlbum__right">
+                    <div class="photoAlbum__topRow">
+                        <img class="photoAlbum__smallItem" src="images/thumbnails/brokenphone.jpg" alt="brokenphone" />
+                        <img class="photoAlbum__smallItem" src="images/thumbnails/brokenphone.jpg" alt="brokenphone" />
+                    </div>
+                    <div class="photoAlbum__bottomRow">
+                        <img class="photoAlbum__smallItem" src="images/thumbnails/brokenphone.jpg" alt="brokenphone" />
+                        <img class="photoAlbum__smallItem" src="images/thumbnails/brokenphone.jpg" alt="brokenphone" />
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="calc">
+            <div class="calc__leftColumn">
+                <img class="clac__img" src="images/death-iphone.png" alt="death-iphone" />           
+            </div>     
+            <div class="calc__rightColumn">
+                <h1 class="header1">Стоимость ремонта</h1>
+                <form>
+                    <p class="smallHeaderBold">Выберите модель телефона</p>
+                    <input type="text" name="modelPhone" class="calc__modelPhone">
+                    <p class="smallHeaderBold">Выберите услугу</p>
+                    <input type="text" name="modelPhone" class="calc__service">                   
+                    <p class="text__30pt">Итоговая стоимость: <strong>1500₽</strong></p>
+                    <p class="smallGreyText">Включая стоимость запчастей и услуги по ремонту</p>
+                    <p class="text__30pt">Гарантия: 3 месяца</p>
+                    <p class="smallGreyText">Выдается гарантийный талон</p> 
+                    <p class="text__30pt">Сроки: ~4 часа</p>
+                    <p class="smallGreyText">Примерное время ремонта </p>
+                    <div class="calc__bottom">
+                        <button type="button" class="greenButton">Записаться на ремонт</button>
+                        <div class="smallGreyText">Получите подарок при записи на ремонт онлайн</div>
+                    </div>
+                
+                </form>
+            </div>       
+        </div>
+
+        <script>
+            document.getElementById('links').onclick = function (event) {
+              event = event || window.event
+              var target = event.target || event.srcElement
+              var link = target.src ? target.parentNode : target
+              var options = { index: link, event: event }
+              var links = this.getElementsByTagName('a')
+              blueimp.Gallery(links, options)
+            }
+          </script>
+    </div>
+    <footer></footer>
+
+    <!-- The Gallery as lightbox dialog, should be a document body child element -->
+    <div
+    id="blueimp-gallery"
+    class="blueimp-gallery"
+    aria-label="image gallery"
+    aria-modal="true"
+    role="dialog"
+    >
+    <div class="slides" aria-live="polite"></div>
+    <h3 class="title"></h3>
+    <a
+      class="prev"
+      aria-controls="blueimp-gallery"
+      aria-label="previous slide"
+      aria-keyshortcuts="ArrowLeft"
+    ></a>
+    <a
+      class="next"
+      aria-controls="blueimp-gallery"
+      aria-label="next slide"
+      aria-keyshortcuts="ArrowRight"
+    ></a>
+    <a
+      class="close"
+      aria-controls="blueimp-gallery"
+      aria-label="close"
+      aria-keyshortcuts="Escape"
+    ></a>
+    <a
+      class="play-pause"
+      aria-controls="blueimp-gallery"
+      aria-label="play slideshow"
+      aria-keyshortcuts="Space"
+      aria-pressed="false"
+      role="button"
+    ></a>
+    <ol class="indicator"></ol>
+    </div>
+    <script src="./scripts/script.js"></script>
+    <script src="gallery-master/js/blueimp-gallery.min.js"></script>
+</body>
+</html>
