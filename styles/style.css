@@ -7,8 +7,11 @@
 }
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;  
+    color: var(--main-color-text);   
+    margin: 0;   
+}
+.body {
     margin: 0 5%;
-    color: var(--main-color-text);      
 }
 a {
     color: inherit;
@@ -412,4 +415,44 @@ header {
 .ourLocation_columnRight p{
     margin: 0;
     font-size: 14pt;
+}
+
+/*footer */
+.footer {
+    background-color: #ebebeb;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 50px;
+    color: #333333;
+    justify-content: space-between;
+
+}
+.footer_container {
+    flex-basis: 100%;
+    margin: 3% 5%;
+}
+.footer_nav {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-basis: 100%;
+    margin: 0 5% 0 5%;
+
+}
+.footer_nav ul {
+    flex-basis: 24%;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.footer li {
+    margin: 10px 0;
+}
+.footer_li__contacts {
+    margin-bottom: 0%;
+}
+.footer_li__contactsmargin {
+    margin-bottom: 5px;
 }
