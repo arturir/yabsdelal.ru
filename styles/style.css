@@ -17,12 +17,13 @@ a {
     color: inherit;
     text-decoration: none;
 }
-input[type=text] {
+input[type=text], select {
+    box-sizing: border-box;
     width: 230px;
     height: 40px;
     border-radius: 10px;
     border-color: #57d900;
-    border-style:solid;
+    border-style: solid;
 }
 .header1 {
     margin-top: 40px;
@@ -143,8 +144,32 @@ header {
     .headerBurger:before{
         top: 5px;
     }
-}
 
+    
+}
+.burgerMenu {
+        display: none;
+        align-items: center;
+        position: absolute;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        background: white;
+        opacity: 0.9;
+    }
+    .burgerMenu nav {
+        align-items: center;
+    }
+    .burgerMenu nav li {
+        list-style-type: none;
+        font-size: 22pt;
+        padding-bottom: 20px;
+        display: block;
+        border-bottom: 1px solid #333333;
+    }
+.burgerMenu {
+    display: none;
+}
 /*banner*/
 .mainBanner {
     margin-bottom: 5%;
@@ -426,6 +451,7 @@ header {
     margin-top: 50px;
     color: #333333;
     justify-content: space-between;
+    padding-bottom: 100px;
 
 }
 .footer_container {

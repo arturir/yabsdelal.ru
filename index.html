@@ -12,6 +12,13 @@
 
 
 <body> 
+    <div class="burgerMenu">
+        <nav>
+            <li>Ремонт Apple iPhone</li>
+            <li>Ремонт Android-смартфонов</li>
+            <li>Контакты</li>
+        </nav>
+    </div>
     <div class="body">  
         <header>
             <div class="headerLeft">
@@ -23,7 +30,8 @@
                 </div>
             </div>
             <div class="headerRight">
-                <div class="headerRight_menu">Наши услуги</div>
+                <div class="headerRight_menu"><a href=/ourServices>Наши услуги</a></div>
+                
                 <div class="headerRight_contacts" href="/kontakty">Контакты</div>
             </div>
             <a href="#">
@@ -31,6 +39,7 @@
                     <span></span>
                 </div>
             </a>
+        
         </header>
         <div class="body">
             <div class="mainBanner">
@@ -122,12 +131,30 @@
                 <div class="calcRightColumn">
                     <h1 class="header1">Стоимость ремонта</h1>
                     <form>
+
+                        <p class="smallBoldText">Выберите марку телефона</p>
+                        <select id="calc_brand" name="brandPhone" class="calc_brandPhone">
+                            <option value="id-1">iPhone</option>
+                            <option value="id-2">Samsung</option>
+                            <option value="id-3">Honor</option>
+                        </select>
+
                         <p class="smallBoldText">Выберите модель телефона</p>
-                        <input type="text" name="modelPhone" class="calc_modelPhone">
+                        <select id="calc_model" name="modelPhone" class="calc_modelPhone">
+                            <option value="id-1">iPhone 5s</option>
+                            <option value="id-2">iPhone 6</option>
+                            <option value="id-3">iPhone 6 Plus</option>
+                        </select>
                         <p class="smallBoldText">Выберите услугу</p>
-                        <input type="text" name="modelPhone" class="calc_service"> 
+                        <select id="calc_service" name="modelPhone" class="calc_service">
+                            <option value="display-replacment">Замена дисплея</option>
+                            <option value="battery-replacment">Замена аккумулятора</option>
+                            <option value="backcover-replacment">Замена крышки</option>
+                        </select>
+
+
                         <div class="calcRightColumn_item">                   
-                            <p class="bigText">Итоговая стоимость: <strong>1500₽</strong></p>
+                            <p class="bigText">Итоговая стоимость: <strong id="calc_price">1500₽</strong></p>
                             <p class="smallGreyText">Включая стоимость запчастей и услуги по ремонту</p>
                         </div>
                         <div class="calcRightColumn_wrapper">
