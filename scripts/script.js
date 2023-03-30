@@ -35,7 +35,7 @@ burgerMenu.addEventListener('click', (event)=>{
 const menu = document.querySelector('.headerRight_menu');
 
     menu.addEventListener('click', (event)=> {
-        event.preventDefault();
+        // event.preventDefault();
         console.log('click');
         
     });
@@ -45,51 +45,83 @@ const calcBrand = document.querySelector('#calc_brand');
 const calcModelPhone = document.querySelector('#calc_model');
 const calcServicePhone = document.querySelector('#calc_service');
 const calcPrice = document.querySelector('#calc_price');
-async function calc () {
+const loading = true;
+
+const calcForm = document.querySelector('.calcRightColumn'),
+      calcDiv = document.createElement('div');
+      calcDiv.innerHTML = '<img src="/images/running-heart.gif" alt="preloader"><div class="smallGreyText">Загрузка</div>';
+      calcDiv.classList.add('preload');
+      console.log(calcForm);
+      calcForm.classList.add('parentPreload');
+      calcForm.append(calcDiv);
+
+export async function calc (brand, modelId, ids) {
+
+    modelId = modelId -1;
     let response = await fetch('http://localhost:3000/db');
+    console.log('RESPONSE!');
     if (response.ok) {
+        document.querySelector(".preload").remove();
         response = await response.json();
         console.log('GET:', response);
         calcBrand.innerHTML = '';
         calcModelPhone.innerHTML = '';
         calcServicePhone.innerHTML ='';
         calcPrice.innerHTML = '0 ₽';
+        if (brand) {
+            calcBrand.innerHTML += `<option value="${brand}">${brand}</option>`;
+        } else {
         Object.entries(response).forEach((elem, i) => {
             calcBrand.innerHTML += `<option value="${elem[0]}">${elem[0]}</option>`;
-        });
+        });}
         changeBrandPhone();
-        changeModelPhone();
-        calcBrand.addEventListener('change', changeBrandPhone);
-        calcModelPhone.addEventListener('change', changeModelPhone);
-        calcServicePhone.addEventListener('change', changeServicePhone);        
+        changeModelPhone('', '' ,ids);
+        calcBrand.addEventListener('change', ()=>{changeBrandPhone('', modelId)});
+        calcModelPhone.addEventListener('change', ()=>{changeModelPhone('', '' , ids)});
+        calcServicePhone.addEventListener('change', changeServicePhone);   
+        
+
     }
     else {
         console.error('ОШИБКА ', response.status);
     }
 
-    function changeBrandPhone () {
-        let modelList = response[calcBrand.value];
+    function changeBrandPhone (event, modelId) {
+        console.log('событие');
+        let modelList = response[calcBrand.value][modelId] || response[calcBrand.value];
+       
         calcModelPhone.innerHTML = '';
+        if (!Array.isArray(modelList)) {modelList = [modelList]};
         for (let i=0; i<Object.keys(modelList).length; i++){
-            calcModelPhone.innerHTML += `<option value="${i}">${modelList[i].name}</option>`;
+            calcModelPhone.innerHTML += `<option value="${i}" id="optionModel${i}">${modelList[i].name}</option>`;
         }      
-        changeModelPhone();  
-    }
-
-    function changeModelPhone () {
-        let serivceList = response[calcBrand.value][calcModelPhone.value];
+        changeServicePhone();
         
-        console.log('SERVICES:', serivceList);
+    }
+    function changeModelPhone (event, serivceList_, idService) {
+        let serivceList = serivceList_ || response[calcBrand.value][calcModelPhone.value];
+        console.log('changeModelPhone', serivceList);
         let serivcesKeys = Object.keys(serivceList);
         calcServicePhone.innerHTML ='';
-        for (let i=3; i<serivcesKeys.length; i++){
-            calcServicePhone.innerHTML += `<option value="${i}">${serivcesKeys[i]}</option>`;
+        if (idService) {
+            idService.forEach(i => calcServicePhone.innerHTML += `<option value="${i}" id="optionService${i}">${serivcesKeys[i]}</option>`);
+            
+            
+        } else {
+            for (let i=3; i<serivcesKeys.length; i++){
+                if (serivceList[serivcesKeys[i]] == 0) {
+                    continue;
+                } else {
+                calcServicePhone.innerHTML += `<option value="${i}" id="optionService${i}">${serivcesKeys[i]}</option>`;
+                }
+            }
         }
         changeServicePhone();
     }
 
-    function changeServicePhone () {     
-        let serivces = response[calcBrand.value][calcModelPhone.value];
+    function changeServicePhone(event, serivces_) {    
+        let serivces = serivces_ || response[calcBrand.value][calcModelPhone.value]; 
+        console.log('changeServicePhone', serivces);
         let serivcesKeys = Object.keys(serivces);
         if (calcServicePhone.value == 3 || calcServicePhone.value == 4 || calcServicePhone.value == 5) {
             calcPrice.innerHTML = +serivces[serivcesKeys[2]] + +serivces[serivcesKeys[calcServicePhone.value]] + '₽';
@@ -97,7 +129,84 @@ async function calc () {
             calcPrice.innerHTML = +serivces[serivcesKeys[calcServicePhone.value]] + '₽';
         }
     }
-
+    
 }
 
-calc();
+
+
+
+//reviews
+async function getReviews (){
+    let response2 = await fetch('http://localhost:4000/reviews');
+    if (response2.ok) {
+        response2 = await response2.json();
+        console.log('GET:', response2);
+        const reviewsWrapper = document.querySelector('.reviewsWrapper');
+        let j=0;
+        for (let i=0; i<3; i++) {
+           
+            let column = document.createElement('div');
+            column.classList.add('reviewsColumn');
+            for (let l=0; l<3; l++) {
+                column.insertAdjacentHTML('afterbegin', `<div class="reviewsItem">
+                <div class="reviewsItem_user">
+                    <img class="reviewsItem_photo" src="${response2[j].avatar}" alt="reviews">
+                    <div class="reviewsItem_name smallBoldText">${response2[j].name}</div>
+                </div>
+                <div class="reviewsItem_stars">&#11088; &#11088; &#11088; &#11088; &#11088;</div>
+                <div class="reviewsItem_text">${response2[j].text}</div>
+                <div class="reviewsItem_date smallGreyText">${response2[j].date}</div>
+                <div class="reviewsItem_resource smallGreyText"><a href="${response2[j].resource}" target="_blank">${response2[j].source}</a></div>
+            </div>`);
+            j++;
+            };
+            
+            console.log(column);
+            reviewsWrapper.insertAdjacentElement('afterbegin', column);
+
+        }
+    } else {
+        console.error('ОШИБКА ', response.status);
+    }
+}
+getReviews ();
+
+
+/**book a repair **/
+
+const requestFormWrapper = document.querySelector('.requestFormWrapper');
+const bookRepair = document.querySelector('#bookRepair');
+console.log(bookRepair);
+const bookForm = document.querySelector('.requestForm'),
+    closeForm = document.querySelector('.closeRequestForm');
+console.log(bookForm);
+bookRepair.addEventListener('click', ()=> {
+    console.log('click');
+    requestFormWrapper.style.display = 'flex';
+    body.style.overflow = 'hidden'; 
+    document.querySelector('.formServiceWrapper').style.display = 'block';
+    document.querySelector('.header2Form').innerHTML = 'Запись на ремонт';
+    document.querySelector('.clientModelPhone').value = document.querySelector(`#optionModel${document.querySelector('.calc_modelPhone').value}`).innerHTML;
+    document.querySelector('.clientService').value = document.querySelector(`#optionService${document.querySelector('.calc_service').value}`).innerHTML;
+    document.querySelector('.calc_service').value;
+    document.querySelector('.clientPrice').value = document.querySelector('#calc_price').textContent;
+});
+closeForm.addEventListener('click', ()=> {
+    requestFormWrapper.style.display = 'none';
+    body.style.overflow = ''; 
+});
+requestFormWrapper.addEventListener('click',(event)=> {
+    if (event.target.classList[0] == 'requestFormWrapper') {
+        requestFormWrapper.style.display = 'none';
+        body.style.overflow = ''; 
+    }
+});
+
+/* callback */
+const callbackButton = document.querySelector('.callback');
+    callbackButton.addEventListener('click', ()=> {
+        requestFormWrapper.style.display = 'flex';
+        body.style.overflow = 'hidden'; 
+        document.querySelector('.formServiceWrapper').style.display = 'none';
+        document.querySelector('.header2Form').innerHTML = 'Форма обратного звонка';
+    });

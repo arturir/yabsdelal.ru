@@ -1,4 +1,4 @@
-{ "iPhones": [
+{ "iPhone": [
    {
     "id": 1,
     "name": "iPhone 5S",
@@ -292,9 +292,9 @@
    {
     "id": 1,
     "name": "Honor 8A",
-    "display replacment (work)": 700,
+    "display replacment (work)": 10000,
     "display replacment (parts copy)": 700,
-    "display replacment (parts high copy)": 700,
+    "display replacment (parts high copy)": 800,
     "display replacment (parts originaly)": 1000,
     "battery repalcement (work)": 1000,
     "backcover replacment": 1000,
@@ -307,7 +307,7 @@
     "display replacment (work)": 0,
     "display replacment (parts copy)": 800,
     "display replacment (parts high copy)": 800,
-    "display replacment (parts originaly)": 1000,
+    "display replacment (parts originaly)": 0,
     "battery repalcement (work)": 1000,
     "backcover replacment": 1000,
     "microphone repair": 1000,

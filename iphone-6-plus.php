@@ -4,48 +4,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/style.css">
-    <link rel="stylesheet" href="gallery-master/css/blueimp-gallery.min.css" />
+    <link rel="stylesheet" href="/styles/style.css">
+    <link rel="stylesheet" href="/gallery-master/css/blueimp-gallery.min.css" />
     <title>Document</title>
 </head>
-
-
-
-<body> 
-    <div class="burgerMenu">
-        <nav>
-            <li>Ремонт Apple iPhone</li>
-            <li>Ремонт Android-смартфонов</li>
-            <li>Контакты</li>
-        </nav>
-    </div>
-    <div class="body">  
-        <header>
-            <div class="headerLeft">
-                <div class="logo">ЯбСделал</div>
-                <div class ="headerLeft_contacts"> 
-                    <a href="tel:+79300304430"><div class="headerLeft_number">&#128222 +7-930-030-44-30</div></a>
-                    <div class="headerLeft_address">ул. Дворянская 10 (ЦУМ Валентина), 2 этаж</div>
-                    <div class="headerLeft_scheme">Схема прохода</div>
-                </div>
-            </div>
-            <div class="headerRight">
-                <div class="headerRight_menu"><a href=/ourServices>Наши услуги</a></div>
-                
-                <div class="headerRight_contacts" href="/kontakty">Контакты</div>
-            </div>
-            <a href="#">
-                <div class="headerBurger">
-                    <span></span>
-                </div>
-            </a>
-        
-        </header>
-        <div class="body">
+<?php include 'header.php';?>
+<div>
             <div class="mainBanner">
-                <h1 class="mainBanner_h1">Ремонт телефонов во Владимире</h1>
+                <h1 class="mainBanner_h1">Ремонт iPhone 6 plus во Владимире</h1>
                 <div class="mainBanner_bottom">
-                    <button type="button" class="greenButton">Узнать стоимость</button>
+                    <a href="#calc"><button type="button" class="greenButton" id="howMuch" name="howMuch">Узнать стоимость</button></a>
                     <div class="mainBanner_description">&#128736  Среднее время ремонта ~ 3 часа</div>
                 </div>
             </div>
@@ -57,9 +25,9 @@
                     <h2 class="header2">Работаем с 2019 г.</h2>
                     <h2 class="header2">Наладили более 4 000 устройств</h2>
                     <div class="raiting">
-                        <div class="raiting_item">Рейтинг Яндекс 4.9</div>
-                        <div class="raiting_item">Рейтинг Google - 5.0</div>
-                        <div class="raiting_item">Рейтинг 2ГИС - 4.5</div>
+                        <div class="raiting_item"><a href="https://yandex.ru/profile/19637641765">Рейтинг Яндекс 4.9</a></div>
+                        <div class="raiting_item"><a href="https://goo.gl/maps/72HzLeuUZXZEnsgz6">Рейтинг Google - 5.0</a></div>
+                        <div class="raiting_item"><a href="https://2gis.ru/vladimir/firm/70000001035818248">Рейтинг 2ГИС - 4.5</a></div>
                     </div>
                     <hr class="greyLine"/>
                     <div class="ourExperience_wrapper">
@@ -79,54 +47,42 @@
 
             </div>
         </div>
-        <!-- <div class="examplesOurWork">                
-            <div id="links" class="photoAlmbum">
-                <div class="photoAlbum__columnLeft">
-                    <a class="bigThumbnailsImg" href="images/brokenphone.jpg" title="brokenphone">
-                        <img src="images/thumbnails/brokenphone.jpg" alt="brokenphone" />
-                    </a>
-                    <a class="bigThumbnailsImg" href="images/brokenphone.jpg" title="brokenphone">
-                      <img src="images/thumbnails/brokenphone.jpg" alt="brokenphone" />
-                    </a>
-                </div>
-                <div class="photoAlbum__columnRight">  
-                    <a class="thumbnailsImg" href="images/brokenphone.jpg" title="brokenphone">
-                      <img src="images/thumbnails/brokenphone.jpg" alt="brokenphone" />
-                    </a>            
-                    <a class="thumbnailsImg" href="images/brokenphone.jpg" title="brokenphone">
-                      <img src="images/thumbnails/brokenphone.jpg" alt="brokenphone" />
-                    </a>
-                    <a class="thumbnailsImg" href="images/brokenphone.jpg" title="brokenphone">
-                      <img src="images/thumbnails/brokenphone.jpg" alt="brokenphone" />
-                    </a>
-                     <a class="thumbnailsImg" href="images/brokenphone.jpg" title="brokenphone">
-                      <img src="images/thumbnails/brokenphone.jpg" alt="brokenphone" />
-                    </a>
-                </div>    
-            </div> -->
             <div class="examplesOurWork">
                 <h1 class="header1">Примеры нашей работы</h1>
-                <div class="photoAlbum">
+                <div id="links" class="photoAlbum">
                     <div class="photoAlbumLeft">
-                        <img class="photoAlbumLeft_item" src="images/thumbnails/brokenphone.jpg" alt="brokenphone" />
-                        <img class="photoAlbumLeft_item" src="images/thumbnails/brokenphone.jpg" alt="brokenphone" />
+                        <a class="photoAlbumLeft_item" href="/images/review1.jpg" title="brokenphone">
+                            <img class="photoAlbumLeft_itemImg" src="/images/thumbnails/review1.jpg" alt="brokenphone" />
+                        </a>
+                        <a class="photoAlbumLeft_item" href="/images/review2.jpg" title="brokenphone">
+                            <img class="photoAlbumLeft_itemImg" src="/images/thumbnails/review2.jpg" alt="brokenphone" />
+                        </a>
                     </div>
                     <div class="photoAlbumRight">
                         <div class="photoAlbumRight_topRow">
-                            <img class="photoAlbumRight_smallItem" src="images/thumbnails/brokenphone.jpg" alt="brokenphone" />
-                            <img class="photoAlbumRight_smallItem" src="images/thumbnails/brokenphone.jpg" alt="brokenphone" />
+                            <a class="photoAlbumRight_smallItem" href="/images/review3.jpg" title="brokenphone">
+                                <img class="photoAlbumRight_smallItemImg" src="/images/thumbnails/review3.jpg" alt="brokenphone" />
+                            </a>
+                            <a class="photoAlbumRight_smallItem" href="/images/review4.jpg" title="brokenphone">
+                                <img class="photoAlbumRight_smallItemImg" src="/images/thumbnails/review4.jpg" alt="brokenphone" />
+                            </a>
                         </div>
                         <div class="photoAlbumRight_bottomRow">
-                            <img class="photoAlbumRight_smallItem" src="images/thumbnails/brokenphone.jpg" alt="brokenphone" />
-                            <img class="photoAlbumRight_smallItem" src="images/thumbnails/brokenphone.jpg" alt="brokenphone" />
+                            <a class="photoAlbumRight_smallItem" href="/images/review5.jpg" title="brokenphone">
+                                <img class="photoAlbumRight_smallItemImg" src="/images/thumbnails/review5.jpg" alt="brokenphone" />
+                            </a>
+                            <a class="photoAlbumRight_smallItem" href="/images/review6.jpg" title="brokenphone">
+                                <img class="photoAlbumRight_smallItemImg" src="/images/thumbnails/review6.jpg" alt="brokenphone" />
+                            </a>
+                            
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div class="calc">
+            <div class="calc" id="calc">
                 <div class="calcLeftColumn">
-                    <img class="calcLeftColumn_img" src="images/death-iphone.png" alt="death-iphone" />           
+                    <img class="calcLeftColumn_img" src="/images/death-iphone.png" alt="death-iphone" />           
                 </div>     
                 <div class="calcRightColumn">
                     <h1 class="header1">Стоимость ремонта</h1>
@@ -154,28 +110,28 @@
 
 
                         <div class="calcRightColumn_item">                   
-                            <p class="bigText">Итоговая стоимость: <strong id="calc_price">1500₽</strong></p>
-                            <p class="smallGreyText">Включая стоимость запчастей и услуги по ремонту</p>
+                            <p class="bigText">Итоговая стоимость*: <strong id="calc_price">1500₽</strong></p>
+                            <p class="smallGreyText">Включая стоимость запчастей и услуги по ремонту. *Не является публичной офертой.</p>
                         </div>
                         <div class="calcRightColumn_wrapper">
                             <div class="calcRightColumn_item">   
-                                <p class="bigText">Гарантия: 3 месяца</p>
-                                <p class="smallGreyText">Выдается гарантийный талон</p> 
+                                <p class="bigText">Гарантия: Есть</p>
+                                <p class="smallGreyText">от 30 до 180 дней см. <a href="/time-and-garanty.pdf"><u>здесь</u></a></p> 
                             </div>
 
                             <div class="calcRightColumn_item">  
-                                <p class="bigText">Сроки: ~4 часа</p>
-                                <p class="smallGreyText">Примерное время ремонта </p>
+                                <p class="bigText">Сроки: ~1-4 часа</p>
+                                <p class="smallGreyText">Время ремонта см. <a href="/time-and-garanty.pdf"><u>здесь</u></a></p>
                             </div>
                         </div>
 
                         <div class="calcRight_bottom">
-                            <button type="button" class="greenButton">Записаться на ремонт</button>
-                            <div class="smallGreyText smallGreyText_calc">&#127873;Получите подарок при записи на ремонт онлайн</div>
+                            <div><button type="button" class="greenButton" id="bookRepair">Записаться на ремонт</button></div>
+                            <p class="smallGreyText smallGreyText_calc">&#127873;Получите подарок при записи на ремонт онлайн - <a href="/gifts.pdf"><u>подробнее</u></a></p>
                         </div>
                     
                     </form>
-                </div>       
+                </div>      
             </div> 
 
             <div class="reviews">
@@ -184,7 +140,7 @@
                     <div class="smallGreyText">Более 100 отзывов оставили наши клиенты. Из них более 95% - положительные.</div>
                 </div>
                 <div class="reviewsWrapper">
-                    <div class="reviewsColumn">
+                    <!-- <div class="reviewsColumn">
                         <div class="reviewsItem">
                             <div class="reviewsItem_user">
                                 <img class="reviewsItem_photo" src="images/thumbnails/reviews.jpg" alt="reviews">
@@ -284,145 +240,8 @@
                             <div class="reviewsItem_resource smallGreyText">Вконтакте</div>
                         </div>
 
-                    </div>
+                    </div> -->
                 </div>
             </div>
-            <div class="popularService">
-                <h1 class="header1">Ремонтируем чаще всего</h1>
-                <div class="popularServiceItems">
-                    <a href="#" class="popularServiceItem">Замена экрана на телефоне</a><a href="#" class="popularServiceItem">Ремонт iPhone</a> <a href="#" class="popularServiceItem">Замена дисплея на телефоне</a>
-                    <a href="#" class="popularServiceItem">Замена аккумулятора на телефоне</a><a href="#" class="popularServiceItem">Замена стекла на телефоне</a><a href="#" class="popularServiceItem">Ремонт телефона Honor</a>
-                    <a href="#" class="popularServiceItem">Замена дисплея на Samsung</a><a href="#" class="popularServiceItem">Замена дисплея на Xiaomi</a><a href="#" class="popularServiceItem">Замена дисплея на Realme</a>
-                    <a href="#" class="popularServiceItem">Замена разъема на телефоне</a><a href="#" class="popularServiceItem">Замена дисплея на Huawei</a>
-                </div>
-            </div>
-            <div class="feedBack calc">
-                <div class="calcLeftColumn">
-                    <img class="calcLeftColumn_img" src="images/dialog.png" alt="dialog" />           
-                </div> 
-                <div class="calcRightColumn">
-                    <h1 class="reviewsHeader1 header1">Хотите что-то спросить?</h1>
-                    <p class="smallGreyText">Узнайте информацию о ремонте вашего устройства на прямую у специалиста</p>
-                    <br/>
-                    <a href="tel:+79300304430"><h2 class="header2">+7-930-030-44-30</h2></a>
-                    <br/>
-                    <button class="greenButton">Перезвонить мне</button>
-                </div>
-            </div>
-            <div class="ourLocation">
-                <h1 class="header1">Посетите наш сервисный центр</h1>
-                <div class="ourLocationWrapper aboutUs">
-                    <div class="ourLocation_columnLeft ourExperience">
-                        <div class="ourLocationPhotos">
-                            <img class="ourLocation_img" src="images/ourPlace.jpg" alt="dialog" />
-                            <img class="ourLocation_img" src="images/ourPlace.jpg" alt="dialog" />        
-                            <img class="ourLocation_img" src="images/ourPlace.jpg" alt="dialog" /> 
-                        </div>
-                        <p class="header2 ourLocation_header2">ЦУМ «Валентина»</p> 
-                        <div class="ourLocationBottomWrapper aboutUs">
-                            <div class="ourLocation_columnRight">
-                                <p>Дворянская 10, 2 этаж. Центральный вход универмага. </p>
-                                <p>Как добраться?</p>
-                            </div>
-                            <div class="ourLocation_columnRight">
-                                <p>Будни: с 10 до 19</p>
-                                <p>Выходные: с 10 до 17</p>
-                                <p>+7-930-030-44-30</p>                           
-                            </div>
-                        </div>            
-                    </div>
-                    <div class="ourLocation_columnRight yandexMap">
-                        <iframe src="https://yandex.ru/map-widget/v1/?z=15&ol=biz&oid=19637641765" width="100%" height="300" frameborder="0"></iframe>
-                    </div>
-
-                </div>
-            </div>
-            <script>
-                document.getElementById('links').onclick = function (event) {
-                  event = event || window.event
-                  var target = event.target || event.srcElement
-                  var link = target.src ? target.parentNode : target
-                  var options = { index: link, event: event }
-                  var links = this.getElementsByTagName('a')
-                  blueimp.Gallery(links, options)
-                }
-              </script>
-        </div>
-    </div>
-    <footer class="footer">
-        <div class="footer_container">
-            <div class="logo">ЯбСделал</div>
-        </div>
-        <nav class="footer_nav">
-            <ul>
-                <li>Главная</li>
-                <li>Контакты</li>
-                <li>Реквизиты</li>
-
-            </ul>
-            <ul>
-                <li>Ремонт iPhone</li>
-                <li>Ремонт Honor</li>
-                <li>Ремонт Huawei</li>
-                <li>Ремонт Samsung</li>
-                <li>Ремонт др. моделей</li>
-            </ul>
-            <ul>
-                <li>Все отзывы</li>
-                <li>Все услуги</li>
-            </ul>
-            <ul>
-                <div class="footer_li__contacts">Контактный телефон:</div>
-                <div class="footer_li__contactsmargin">+7-930-030-44-30</div>
-                <div class="footer_li__contacts">Будни: с 10 до 19</div>
-                <div class="footer_li__contactsmargin">Выходные: с 10 до 17</div>
-                
-                
-            </ul>
-        </nav>
-
-
-    </footer>
-
-    <!-- The Gallery as lightbox dialog, should be a document body child element -->
-    <div
-    id="blueimp-gallery"
-    class="blueimp-gallery"
-    aria-label="image gallery"
-    aria-modal="true"
-    role="dialog"
-    >
-    <div class="slides" aria-live="polite"></div>
-    <h3 class="title"></h3>
-    <a
-      class="prev"
-      aria-controls="blueimp-gallery"
-      aria-label="previous slide"
-      aria-keyshortcuts="ArrowLeft"
-    ></a>
-    <a
-      class="next"
-      aria-controls="blueimp-gallery"
-      aria-label="next slide"
-      aria-keyshortcuts="ArrowRight"
-    ></a>
-    <a
-      class="close"
-      aria-controls="blueimp-gallery"
-      aria-label="close"
-      aria-keyshortcuts="Escape"
-    ></a>
-    <a
-      class="play-pause"
-      aria-controls="blueimp-gallery"
-      aria-label="play slideshow"
-      aria-keyshortcuts="Space"
-      aria-pressed="false"
-      role="button"
-    ></a>
-    <ol class="indicator"></ol>
-    </div>
-    <script src="./scripts/script.js"></script>
-    <script src="gallery-master/js/blueimp-gallery.min.js"></script>
-</body>
-</html>
+            
+ <?php include 'footer.php';?>
