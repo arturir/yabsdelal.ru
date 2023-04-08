@@ -2,18 +2,22 @@
 /*burger */
 const burger = document.querySelector('.headerBurger'),
       burgerMenu = document.querySelector('.burgerMenu'),
-      body = document.querySelector('body');
+      body = document.querySelector('body'),
+      header = document.querySelector('header');
 burgerMenu.style.display = 'none';
 
 function closeBurgerMenu(){
     burgerMenu.style.display = 'none';
-    body.style.overflow = '';  
+    body.style.overflow = '';
+    header.style.position = 'fixed';
 };
 
-burger.addEventListener('click', ()=> {
+burger.addEventListener('click', (event)=> {
+    event.preventDefault();
     if (burgerMenu.style.display == 'none') {
         burgerMenu.style.display = 'flex';
         body.style.overflow = 'hidden'; 
+        header.style.position = 'static';
 
     } else {
         console.log('test2');
@@ -45,23 +49,12 @@ const calcBrand = document.querySelector('#calc_brand');
 const calcModelPhone = document.querySelector('#calc_model');
 const calcServicePhone = document.querySelector('#calc_service');
 const calcPrice = document.querySelector('#calc_price');
-const loading = true;
-
-const calcForm = document.querySelector('.calcRightColumn'),
-      calcDiv = document.createElement('div');
-      calcDiv.innerHTML = '<img src="/images/running-heart.gif" alt="preloader"><div class="smallGreyText">Загрузка</div>';
-      calcDiv.classList.add('preload');
-      console.log(calcForm);
-      calcForm.classList.add('parentPreload');
-      calcForm.append(calcDiv);
-
 export async function calc (brand, modelId, ids) {
-
+    
     modelId = modelId -1;
-    let response = await fetch('http://localhost:3000/db');
-    console.log('RESPONSE!');
+    let response = await fetch('/getjson.php?arg=0');
+    console.log('RESPONSE!')
     if (response.ok) {
-        document.querySelector(".preload").remove();
         response = await response.json();
         console.log('GET:', response);
         calcBrand.innerHTML = '';
@@ -137,9 +130,10 @@ export async function calc (brand, modelId, ids) {
 
 //reviews
 async function getReviews (){
-    let response2 = await fetch('http://localhost:4000/reviews');
+    let response2 = await fetch('/getjson.php?arg=1');
     if (response2.ok) {
         response2 = await response2.json();
+        response2 = response2.reviews;
         console.log('GET:', response2);
         const reviewsWrapper = document.querySelector('.reviewsWrapper');
         let j=0;

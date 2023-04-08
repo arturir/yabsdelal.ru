@@ -2,7 +2,7 @@
     {
         "id": 1,
         "name": "Katrin P.",
-        "avatar": "reviews/1.jpg",
+        "avatar": "/reviews/1.jpg",
         "date": "05.06.2022",
         "resource": "https://yandex.ru/profile/19637641765",
         "source": "Яндекс",
@@ -12,7 +12,7 @@
     {
         "id": 2,
         "name": "Алексей Г.",
-        "avatar": "reviews/noavatar.jpg",
+        "avatar": "/reviews/noavatar.jpg",
         "date": "20.12.2021",
         "resource": "https://yandex.ru/profile/19637641765",
         "source": "Яндекс",
@@ -22,7 +22,7 @@
     {
         "id": 3,
         "name": "Евгения",
-        "avatar": "reviews/3.jpg",
+        "avatar": "/reviews/3.jpg",
         "date": "16.04.2022",
         "resource": "https://yandex.ru/profile/19637641765",
         "source": "Яндекс",
@@ -33,7 +33,7 @@
     {
         "id": 4,
         "name": "Анна Г.",
-        "avatar": "reviews/noavatar.jpg",
+        "avatar": "/reviews/noavatar.jpg",
         "date": "01.09.2022",
         "resource": "https://yandex.ru/profile/19637641765",
         "source": "Яндекс",
@@ -43,7 +43,7 @@
     },    {
         "id": 5,
         "name": "Иван М.",
-        "avatar": "reviews/5.jpg",
+        "avatar": "/reviews/5.jpg",
         "date": "02.12.2020",
         "resource": "https://vk.com/topic-104440955_39574491",
         "source": "Вконтакте",
@@ -53,7 +53,7 @@
     },    {
         "id": 6,
         "name": "Катерина Н.",
-        "avatar": "reviews/6.jpg",
+        "avatar": "/reviews/6.jpg",
         "date": "20.01.2021",
         "resource": "https://vk.com/topic-104440955_39574491",
         "source": "Вконтакте",
@@ -63,7 +63,7 @@
     },    {
         "id": 7,
         "name": "Алексей К.",
-        "avatar": "reviews/noavatar.jpg",
+        "avatar": "/reviews/noavatar.jpg",
         "date": "01.09.2022",
         "resource": "https://vk.com/topic-104440955_39574491",
         "source": "2ГИС",
@@ -73,7 +73,7 @@
     },    {
         "id": 8,
         "name": "Арина А.",
-        "avatar": "reviews/8.jpg",
+        "avatar": "/reviews/8.jpg",
         "date": "03.05.2021",
         "resource": "https://goo.gl/maps/72HzLeuUZXZEnsgz6",
         "source": "Google",
@@ -82,7 +82,7 @@
     },    {
         "id": 9,
         "name": "Елизавета Ф.",
-        "avatar": "reviews/9.jpg",
+        "avatar": "/reviews/9.jpg",
         "date": "07.08.2021",
         "resource": "https://goo.gl/maps/72HzLeuUZXZEnsgz6",
         "source": "Google",
