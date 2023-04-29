@@ -3,17 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="icon" href="/favicon.ico">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/styles/style.css">
     <link rel="stylesheet" href="/gallery-master/css/blueimp-gallery.min.css" />
-    <title>Document</title>
+    <title>Ремонт Huawei и Honor во Владимире - сервис ЯбСделал</title><meta name='description' content='Сервисный центр по ремонту Huawei и Honor во Владимире. Замена дисплея, стекла, акб, батареи и разъема с гарантией.'/>
+
 </head>
 
 <?php include 'header.php';?>
 <div>
             <div class="mainBanner">
                 <h1 class="mainBanner_h1">Ремонт телефонов Huawei и Honor во Владимире</h1>
-                <div class="mainBanner_bottom">
+                <div class1="mainBanner_bottom">
                     <a href="#calc"><button type="button" class="greenButton" id="howMuch" name="howMuch">Узнать стоимость</button></a>
                     <div class="mainBanner_description">&#128736  Среднее время ремонта ~ 3 часа</div>
                 </div>

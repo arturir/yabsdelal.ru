@@ -4,9 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/favicon.ico">
     <link rel="stylesheet" href="/styles/style.css">
     <link rel="stylesheet" href="/gallery-master/css/blueimp-gallery.min.css" />
-    <title>Document</title>
+    <title>Ремонт iPhone во Владимире - сервис ЯбСделал</title><meta name='description' content='Сервисный центр ремонт iPhone во Владимире Замена дисплея, экрана, стекла и аккумуляторной батареи с гарантией.'/>
+
 </head>
 <?php include 'header.php';?>
 <div>

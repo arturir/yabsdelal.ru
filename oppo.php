@@ -4,9 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/favicon.ico">
     <link rel="stylesheet" href="/styles/style.css">
     <link rel="stylesheet" href="/gallery-master/css/blueimp-gallery.min.css" />
-    <title>Document</title>
+    <title>Ремонт Oppo во Владимире - сервис ЯбСделал</title><meta name='description' content='Сервисный центр по ремонту Oppo во Владимире. Замена дисплея, стекла, акб, батареи и разъема с гарантией.'/>
+
 </head>
 <?php include 'header.php';?>
 <div>

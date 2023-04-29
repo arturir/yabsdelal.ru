@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/favicon.ico">
     <link rel="stylesheet" href="/styles/style.css">
     <link rel="stylesheet" href="/gallery-master/css/blueimp-gallery.min.css" />
     <title>Document</title>
@@ -23,36 +24,36 @@
         
         <div class="requestForm">
             <img class="closeRequestForm" src="/images/close.svg" title="close-button" height="32px" width="32px">
-            <form action="send.php" method="POST">
+            <form action="/send.php" method="POST">
+                
                 <div>
                 <h2 class="header2 header2Form">Запись на ремонт</h2>
                 <p class="pForm">Ваше имя</p>
-                <input type="text" name="name"> <br/>
+                <input required type="text" name="name"> <br/>
                 <p class="pForm">Ваш номер телефона</p>
-                <input type="text" name="tel"><br/>
+                <input required type="text" name="tel"><br/>
                 </div>
                 <div class="formServiceWrapper">
-                    <p class="pForm" id="pModelPhone">Ваша модель телефона</p><input type="text" class="clientModelPhone"  name="clientModelPhone" value="" disabled><br/>
-                    <p class="pForm" id="pService" >Выбранная услуга</p><input type="text" class="clientService" name="clientService" value="" disabled><br/>
-                    <p class="pForm" id="pPrice">Стоимость</p><input type="text" class="clientPrice" name="clientPrice" value="" disabled>
-                    <p>Мы свяжемся с вами для записи вас на ремонт в удобное для вас время. </p>
+                    <p class="pForm" id="pModelPhone">Ваша модель телефона</p><input type="text" class="clientModelPhone"  name="clientModelPhone" value="" readonly><br/>
+                    <p class="pForm" id="pService">Выбранная услуга</p><input type="text" class="clientService" name="clientService" value="" readonly><br/>
+                    <p class="pForm" id="pPrice">Стоимость</p><input type="text" class="clientPrice" name="clientPrice" value="" readonly>
+                    <p class="marginTextOnForm">Мы свяжемся с вами для записи на ремонт в ближайшее время. </p>
                 </div>
-                <p class="bigText">Вы также можете связаться с нами по телефону:</p>        
-                <div class="calcRightColumn_contacts">
-                    <a href="tel:+79300304430"><h2 class="header2">+7-930-030-44-30</h2> 
-                    </a>
-                    <a href="tel:+79300304430"><img src="/images/phone.svg" alt="triangle with all three sides equal" height="32px" width="32px">
+                <p class="smallBoldText marginTextOnForm">Вы также можете связаться с нами по телефону:</p>        
+                <div class="calcRightColumn_contacts marginTextOnForm">
+   
+                    <a href="tel:+79300304430"><p class="smallBoldText">+7-930-030-44-30</p> 
                     </a>
                 </div>
-                <p class="bigText">Или написать нам в мессенджере:</p>
-                <a href="https://wa.me/79300304430"><img src="/images/viber.svg" alt="triangle with all three sides equal" height="64px" width="64x">
+                <p class="smallBoldText marginTextOnForm">Или написать нам в мессенджере:</p>
+                <a href="https://viber.click/79300304430"><img src="/images/viber.svg" alt="triangle with all three sides equal" height="32px" width="32px">
                 </a>
-                <a href="https://viber.click/79300304430"><img src="/images/whatsapp.svg" alt="triangle with all three sides equal" height="64px" width="64px">
+                <a href="https://wa.me/79300304430"><img src="/images/whatsapp.svg" alt="triangle with all three sides equal" height="32px" width="32px">
                 </a>
-                <a href="https://t.me/vladimiriphone" target="_blank"><img src="/images/telegram.svg" alt="triangle with all three sides equal" height="64px" width="64px">
+                <a href="https://t.me/vladimiriphone" target="_blank"><img src="/images/telegram.svg" alt="triangle with all three sides equal" height="32px" width="32px">
                 </a>  
-                <p class="pPrivacy">Данная форма записи на ремонт не является публичной офертой. Нажимая кнопку "Отправить"
-                    вы соглашаетесь с <a href="/privacy.pdf/"><u>политикой конфиденциальности</u></a> и даете согласие на <a href="/privacy.pdf/"><u>обработку персональных данных.</u></a>  </p> 
+                <p class="pPrivacy marginTextOnForm">Данная форма записи на ремонт не является публичной офертой. Нажимая кнопку "Отправить"
+                    вы соглашаетесь с <a href="/privacy.pdf"><u>политикой конфиденциальности</u></a> и даете согласие на <a href="/privacy.pdf"><u>обработку персональных данных.</u></a>  </p> 
                </p>
                <button type="submit" class="greenButton buttonOnForm" id="buttonOnForm" name="buttonOnForm">Отправить</button>
            
@@ -84,7 +85,7 @@
         </header>
         <div>
             <div class="mainBanner">
-                <h1 class="mainBanner_h1">Ремонт iPhone во Владимире</h1>
+                <h1 class="mainBanner_h1">Ремонт телефонов во Владимире</h1>
                 <div class="mainBanner_bottom">
                     <a href="#calc"><button type="button" class="greenButton" id="howMuch" name="howMuch">Узнать стоимость</button></a>
                     <div class="mainBanner_description">&#128736  Среднее время ремонта ~ 3 часа</div>
@@ -188,23 +189,23 @@
                         </div>
                         <div class="calcRightColumn_wrapper">
                             <div class="calcRightColumn_item">   
-                                <p class="bigText">Гарантия: Есть</p>
-                                <p class="smallGreyText">от 30 до 180 дней см. <a href="/time-and-garanty.pdf"><u>здесь</u></a></p> 
+                                <p class="bigText">Гарантия: 3 месяца</p>
+                                <p class="smallGreyText">Выдается гарантийный талон</p> 
                             </div>
 
                             <div class="calcRightColumn_item">  
-                                <p class="bigText">Сроки: ~1-4 часа</p>
-                                <p class="smallGreyText">Время ремонта см. <a href="/time-and-garanty.pdf"><u>здесь</u></a></p>
+                                <p class="bigText">Сроки: ~4 часа</p>
+                                <p class="smallGreyText">Примерное время ремонта </p>
                             </div>
                         </div>
 
                         <div class="calcRight_bottom">
                             <div><button type="button" class="greenButton" id="bookRepair">Записаться на ремонт</button></div>
-                            <p class="smallGreyText smallGreyText_calc">&#127873;Получите подарок при записи на ремонт онлайн - <a href="/gifts.pdf"><u>подробнее</u></a></p>
+                            <p class="smallGreyText smallGreyText_calc">&#127873;Получите подарок при записи на ремонт онлайн</p>
                         </div>
                     
                     </form>
-                </div>      
+                </div>       
             </div> 
 
             <div class="reviews">
@@ -319,29 +320,10 @@
             <div class="popularService">
                 <h1 class="header1">Ремонтируем чаще всего</h1>
                 <div class="popularServiceItems">
-                    <a href='/iphone-5s/' class='popularServiceItem'>iPhone 5S</a>
-                    <a href='/iphone-6/' class='popularServiceItem'>iPhone 6</a>
-                    <a href='/iphone-6-plus/' class='popularServiceItem'>iPhone 6+</a>
-                    <a href='/iphone-6s/' class='popularServiceItem'>iPhone 6S</a>
-                    <a href='/iphone-6s-plus/' class='popularServiceItem'>iPhone 6S+</a>
-                    <a href='/iphone-se/' class='popularServiceItem'>iPhone SE</a>
-                    <a href='/iphone-7/' class='popularServiceItem'>iPhone 7</a>
-                    <a href='/iphone-7-plus/' class='popularServiceItem'>iPhone 7+</a>
-                    <a href='/iphone-8/' class='popularServiceItem'>iPhone 8</a>
-                    <a href='/iphone-8-plus/' class='popularServiceItem'>iPhone 8+</a>
-                    <a href='/iphone-x/' class='popularServiceItem'>iPhone X</a>
-                    <a href='/iphone-xs/' class='popularServiceItem'>iPhone Xs</a>
-                    <a href='/iphone-xs-max/' class='popularServiceItem'>iPhone Xs Max</a>
-                    <a href='/iphone-xr/' class='popularServiceItem'>iPhone Xr</a>
-                    <a href='/iphone-11/' class='popularServiceItem'>iPhone 11</a>
-                    <a href='/iphone-11-pro/' class='popularServiceItem'>iPhone 11 Pro</a>
-                    <a href='/iphone-11-pro-max/' class='popularServiceItem'>iPhone 11 Pro Max</a>
-                    <a href='/iphone-12/' class='popularServiceItem'>iPhone 12</a>
-                    <a href='/iphone-12-pro/' class='popularServiceItem'>iPhone 12 Pro</a>
-                    <a href='/iphone-12-pro-max/' class='popularServiceItem'>iPhone 12 Pro Max</a>
-                    <a href='/iphone-13/' class='popularServiceItem'>iPhone 13</a>
-                    <a href='/iphone-13-pro/' class='popularServiceItem'>iPhone 13 Pro</a>
-                    <a href='/iphone-13-pro-max/' class='popularServiceItem'>iPhone 13 Pro Max</a>
+                    <a href="#" class="popularServiceItem">Замена экрана на телефоне</a><a href="#" class="popularServiceItem">Ремонт iPhone</a> <a href="#" class="popularServiceItem">Замена дисплея на телефоне</a>
+                    <a href="#" class="popularServiceItem">Замена аккумулятора на телефоне</a><a href="#" class="popularServiceItem">Замена стекла на телефоне</a><a href="#" class="popularServiceItem">Ремонт телефона Honor</a>
+                    <a href="#" class="popularServiceItem">Замена дисплея на Samsung</a><a href="#" class="popularServiceItem">Замена дисплея на Xiaomi</a><a href="#" class="popularServiceItem">Замена дисплея на Realme</a>
+                    <a href="#" class="popularServiceItem">Замена разъема на телефоне</a><a href="#" class="popularServiceItem">Замена дисплея на Huawei</a>
                 </div>
             </div>
             <div class="feedBack calc">
@@ -442,10 +424,10 @@
                 <li><a href="/samsung/">Ремонт Samsung</a></li>
                 <li><a href="/android/">Ремонт др. моделей</a></li>
             </ul>
-            <!-- <ul>
+            <ul>
                 <li><a href="/reviews/">Все отзывы</a></li>
                 <li><a href="/all-services/">Все услуги</a></li>
-            </ul> -->
+            </ul>
             <ul>
                 <div class="footer_li__contacts">Контактный телефон:</div>
                 <div class="footer_li__contactsmargin"><a href="tel:+7-930-030-44-30">+7-930-030-44-30</a></div>
@@ -507,7 +489,7 @@
     <script type="module">
         import {calc} from '/scripts/script.js';
         document.addEventListener('DOMContentLoaded', calc()); // calc (бренд, id-модели, [порядковый номер услуг] - начинается с 0);
-
+        
     </script>
 
     <script type="module" src="/scripts/script.js"></script>

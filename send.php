@@ -9,14 +9,18 @@ require 'phpmailer/src/Exception.php';
 // Переменные, которые отправляет пользователь
 $name = $_POST['name'];
 $tel = $_POST['tel'];
-
+$pmodelphone = $_POST['clientModelPhone'];
+$pservice = $_POST['clientService'];
+$pprice = $_POST['clientPrice'];
 // Формирование самого письма
 $title = "Заголовок письма";
 $body = "
-<h2>Новое письмо</h2>
+<h2>Заявка на ремонт. Скорее перезвони!</h2>
 <b>Имя:</b> $name<br>
 <b>Телефон:</b> $tel<br><br>
-<b>Сообщение:</b><br>
+<b>Модель телефона: $pmodelphone </b><br>
+<b>Услуга: $pservice</b><br>
+<b>Цена: $pprice</b>
 ";
 
 
@@ -35,7 +39,7 @@ try {
     $mail->Password   = 'gbclqgiscqkcdbrl'; // Пароль на почте
     $mail->SMTPSecure = 'ssl';
     $mail->Port       = 465;
-    $mail->setFrom('iphone33.ru@yandex.ru', 'Администратор сайта'); // Адрес самой почты и имя отправителя
+    $mail->setFrom('iphone33.ru@yandex.ru', 'Заявка на ремонт с сайт'); // Адрес самой почты и имя отправителя
 
     // Получатель письма
     $mail->addAddress('iphone33.ru@yandex.ru');  

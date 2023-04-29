@@ -3,10 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="icon" href="/favicon.ico">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/styles/style.css">
     <link rel="stylesheet" href="/gallery-master/css/blueimp-gallery.min.css" />
-    <title>Document</title>
+    <title>Ремонт Android-смартфонов во Владимире - сервис ЯбСделал</title><meta name='description' content='Сервисный центр по ремонту Android-смартфонов во Владимире. Замена дисплея, стекла, акб, батареи и разъема с гарантией.'/>
+
 </head>
 <?php include 'header.php';?>
 <div>
